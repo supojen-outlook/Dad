@@ -17,7 +17,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 // 获取所有参与单位
-app.MapGet("/api/participants", async () =>
+app.MapGet("/dad/participants", async () =>
 {
     var participants = new List<Participant>();
     
@@ -43,7 +43,7 @@ app.MapGet("/api/participants", async () =>
 });
 
 // 添加新的参与单位
-app.MapPost("/api/participants", async (ParticipantInput input) =>
+app.MapPost("/dad/participants", async (ParticipantInput input) =>
 {
     // 验证输入
     if (string.IsNullOrWhiteSpace(input.UnitName))
